@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEXTJS-AUTH-APP
 
-## Getting Started
+NEXTJS-AUTH-APP is a Next.js project focused on backend development, featuring a robust authentication system with signup, login, and profile pages.
 
-First, run the development server:
+## Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Signup and Email Verification**: Users can register with a username, email, and password. Upon signup, a confirmation email is sent with a verification link. Clicking the link verifies the email, setting the user as verified in the database.
+  
+- **Login and Forgot Password**: Registered users can log in using their email and password. Forgot password functionality is also implemented, allowing users to reset their passwords via email.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Profile Page**: Users have access to a basic profile page where they can view their details.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Logout**: Secure logout functionality is provided for users.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **Next.js**: Utilized for frontend development.
+- **Node.js**: Backend functionality written in Node.js.
+- **JSON Web Tokens (JWT)**: Used for bearer token generation.
+- **MongoDB**: Database management for storing user information and verification tokens.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Set up MongoDB and configure database connection.
+4. Run the development server using `npm run dev`.
+5. Access the application through the provided URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Motivation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The primary aim of this project is to gain hands-on experience with Next.js and to understand the integration of backend functionalities within a Next.js framework. By implementing a robust authentication system and backend APIs, this project serves as a practical exploration of connecting frontend and backend elements seamlessly.
