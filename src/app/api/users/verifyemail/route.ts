@@ -13,7 +13,7 @@ export async function POST(request: NextRequest){
         console.log("verification token: ", token);
         
         const user = await User.findOne({verifyToken: token, verifyTokenExpiry: {$gt: Date.now()}})
-
+            
         if(!user){
             return NextResponse.json({error:"invaild token!"},{status: 400})
         }
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest){
 
         user.isVerified = true
         user.verifyToken = undefined
-        user.VerifyTokenExpiry = undefined
+        user.verifyTokenExpiry = undefined
         
         await user.save() // await required as db is in another continent..
         return NextResponse.json({

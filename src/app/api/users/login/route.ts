@@ -18,7 +18,8 @@ export async function POST(request: NextRequest){
         console.log(reqBody);
         
         const user = await User.findOne({email})
-
+        console.log(user);
+        
         if(!user){
             return NextResponse.json(
                 {error: "User does not exists."},
@@ -27,7 +28,8 @@ export async function POST(request: NextRequest){
         }
 
         const vaildPassword = await bcryptjs.compare(password, user.password)
-
+        console.log(vaildPassword);
+        
         if(!vaildPassword){
             return NextResponse.json(
                 {error: "Incorrect Password!"},
@@ -44,6 +46,7 @@ export async function POST(request: NextRequest){
         }
         
         const token = jwt.sign(tokenData, process.env.TOKEN_SECRET!, { expiresIn: '1d'})
+        console.log(token);
         
         const response = NextResponse.json({
             message: "Logged In Successfully!",
