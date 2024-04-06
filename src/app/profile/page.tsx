@@ -21,9 +21,17 @@ export default function ProfilePage() {
     }
 
     const getUserDetails = async () => {
-        const res = await axios.get('/api/users/profile')
-        console.log(res.data);
-        setData(res.data.data._id)
+        try{
+            const res = await axios.get('/api/users/profile')
+            console.log(res.data);
+            setData(res.data.data._id)
+            toast.success('User Details Fetched Successfully!')
+        }
+        catch(error: any){
+            console.log(error.message)
+            toast.error(error.message)
+        }
+        
     }
 
     return (

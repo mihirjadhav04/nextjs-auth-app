@@ -12,7 +12,7 @@ export default function VerifyEmailPage() {
     const [verified, setVerified] = useState(false);
     const [error, setError] = useState(false);
 
-    const router = useRouter()
+    // const router = useRouter()
 
     const verifyUserEmail = async () => {
         try {
